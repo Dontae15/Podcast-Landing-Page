@@ -255,7 +255,6 @@ form input {
   font-size: 0.575rem;
   margin-block-start: 0.2rem;
   width: 200px;
-  margin: auto 0;
 }
 
 @media (max-width: 1200px) {
