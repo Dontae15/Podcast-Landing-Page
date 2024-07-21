@@ -1,0 +1,375 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: hsl(224, 35%, 11%);
+}
+
+.grid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  padding-inline-start: 3rem;
+  padding-block: 10rem;
+}
+
+header {
+  max-width: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.podcast-img-desktop {
+  grid-column: 5/13;
+  grid-row: 1/3;
+  max-width: 888px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+}
+
+.podcast-img-tablet {
+  display: none;
+}
+
+.podcast-img-mobile {
+  display: none;
+}
+
+.dot-img {
+  margin-top: -2rem;
+  grid-row: 3;
+  grid-column: 11/span 2;
+}
+
+.socials-mobile {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.podcast-info {
+  max-width: 723px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-block-start: 5.5rem;
+  grid-column: 1/8;
+  grid-row: 2/3;
+}
+
+.podcast-info h1 {
+  color: hsl(157, 74%, 62%);
+  font-size: 3.25rem;
+  font-weight: 300;
+  line-height: 62px;
+  font-family: "Chivo", sans-serif;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  max-width: 665px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+}
+
+.podcast-info span {
+  color: hsl(0, 0%, 100%);
+}
+
+.podcast-info p {
+  color: hsl(225, 21%, 45%);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 28px;
+  font-family: "Chivo", sans-serif;
+  letter-spacing: normal;
+  max-width: 445px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+}
+
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr;
+  gap: 0;
+}
+
+form button {
+  padding: 0.5125rem 1.6875rem;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: hsl(157, 74%, 62%);
+  box-shadow: 0px 2px 4px 0px rgba(84, 230, 175, 0.14);
+  color: hsl(224, 35%, 11%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: "Chivo", sans-serif;
+  letter-spacing: normal;
+  grid-column: 3/5;
+  grid-row: 1/2;
+  margin: 0.2rem;
+}
+
+form button:hover {
+  background-color: hsl(157, 100%, 85%);
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.5);
+}
+
+form input {
+  max-width: 500px;
+  width: 100%;
+  margin: 0;
+  padding: 0.875rem 2rem;
+  border-radius: 28px;
+  background-color: hsl(224, 26%, 23%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: "Chivo", sans-serif;
+  letter-spacing: normal;
+  grid-column: 1/5;
+  grid-row: 1/2;
+  border: none;
+}
+
+.socials {
+  max-width: 536px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: hsl(224, 35%, 11%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block-start: 3rem;
+}
+
+#error-message {
+  color: red;
+  font-size: 0.575rem;
+  margin-block-start: 0.2rem;
+  width: 200px;
+  margin: auto 0;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    margin: 0 auto;
+    padding-block-end: 5rem;
+  }
+  .podcast-img-desktop {
+    display: none;
+  }
+  .podcast-img-tablet {
+    display: block;
+    grid-column: 7/13;
+    grid-row: 1/3;
+  }
+  .podcast-info {
+    grid-column: 1/12;
+    grid-row: 2/3;
+    margin-top: 10rem;
+  }
+  .podcast-info h1 {
+    font-size: 3rem;
+  }
+  .dot-img {
+    grid-column: 1/span 4;
+    padding-block-start: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    padding: 0;
+  }
+  header img {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 auto;
+  }
+  .podcast-img-tablet {
+    display: none;
+  }
+  .podcast-img-mobile {
+    display: block;
+    grid-column: 1/13;
+    grid-row: 1/2;
+  }
+  .podcast-info {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    margin: 0 auto;
+    opacity: 0.7993;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+  }
+  .podcast-info h1 {
+    font-size: 1.625rem;
+    text-align: center;
+    max-width: 327px;
+    margin: 0 auto;
+    line-height: 38px;
+  }
+  .podcast-info p {
+    font-size: 0.9375rem;
+    text-align: center;
+    max-width: 327px;
+    margin: 0 auto;
+    line-height: 25px;
+  }
+  form {
+    max-width: 327px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0 auto;
+    grid-row: 1/2;
+    grid-column: 1/13;
+    background: none;
+  }
+  form button {
+    max-width: 327px;
+    width: 100%;
+  }
+  form input {
+    padding: 0.6rem 1.5rem;
+  }
+  .dot-img {
+    display: none;
+  }
+  .socials {
+    display: none;
+  }
+  .socials-mobile {
+    max-width: 315px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 0;
+    background-color: hsl(224, 35%, 11%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 2rem;
+  }
+  .socials-mobile img {
+    width: 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */
